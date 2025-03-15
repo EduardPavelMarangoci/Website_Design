@@ -1,0 +1,18 @@
+{
+  "name": "Scrim-s03sdmg",
+  "description": "https://scrimba.com/build-a-space-travel-website-c014/~03",
+  "scripts": {
+    "watch": "webpack -w",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "Scrim-s03sdmg": "file:",
+    "webpack": "^2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0",
+    "babel-loader": "^7.0",
+    "babel-preset-env": "*",
+    "babel-preset-react": "*"
+  }
+}
