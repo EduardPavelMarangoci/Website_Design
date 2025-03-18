@@ -283,12 +283,33 @@ select {
     transform: scale(1.5);
 }
 
+@media (max-width: 35em) {
+    .primary-navigation {
+        /* --gap: 8rem; */
+        --underline-gap: .5rem !important;
+        display: flex;
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 20%;
+        list-style: none;
+        padding: min(20rem, 15vh) 2rem !important;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .primary-navigation.underline-indicators {
+        border: 0;
+    }
+}
+
 .primary-navigation {
-    --gap: 8rem;
+    /* --gap: 8rem; */
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
+    background-color: hsl( var(--clr-white) / .002);
+    backdrop-filter: blur(1.5rem);
 }
 
 .primary-navigation a {
