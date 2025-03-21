@@ -5,23 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet">
+      
+  <!-- Our custom CSS -->
+  <link rel="stylesheet" href="index.css">
   <title>Frontend Mentor | Space tourism website</title>
+
+  <!-- "defer" attribute let the js load after has been loaded but it can be place on top of the file  -->
+  <script src="index.js" defer></script>
 </head>
-<body>
+<body class="crew">
+  <a href="#main" class="skip-to-content">Skip to content</a>
+  <header class="primary-header flex">
+    <div>
+      <img src="assets/shared/logo.svg" alt="Space travel tourism logo" class="logo">
+    </div>
+    <button class="nav-mobile-toggle" aria-controls="primary-navigation">
+      <span class="sr-only" aria-expanded="false">
+        Menu
+      </span>
+    </button>
+    <nav>
+      <!-- "aria-hidden" to don't let accessability to read the numbers in the nav -->
+      <!-- hiddeing it for screen readers, because is a decorative touch  -->
+      <ul id="primary-navigation" data-visible="false" class="flex primary-navigation underline-indicators">
+        <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="#"><span aria-hidden="true">00</span>Home</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="#"><span aria-hidden="true">01</span>Destination</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="#"><span aria-hidden="true">02</span>Crew</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="#"><span aria-hidden="true">03</span>Technology</a></li>
+    </ul>
+    </nav>
+  </header>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+  <main id="main" class="grid-container grid-container--crew flow">
+    <h1 class="numbered-title"><span aria-hidden="true">02</span> Meet your crew</h1>
+    <div class="dot-indicators flex">
+      <button aria-selected="true"><span class="sr-only">The commander</span></button>
+      <button aria-selected="false"><span class="sr-only">The mission specialist</span></button>
+      <button aria-selected="false"><span class="sr-only">The pilot</span></button>
+      <button aria-selected="false"><span class="sr-only">The crew engineer</span></button>
+    </div>
+    <article class="crew-details">
+      <h2 class="fs-600 ff-serif uppercase">Commander</h2>
+      <p class="fs-700 uppercase ff-serif">Douglas Hurley</p>
 
-  02 Meet your crew
+      <p>
+        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
+        and former NASA astronaut. He launched into space for the third time as 
+        commander of Crew Dragon Demo-2.
+      </p>
+    </article>
 
-  Commander
-  Douglas Hurley
-
-  Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
-  and former NASA astronaut. He launched into space for the third time as 
-  commander of Crew Dragon Demo-2.
+    <img src="./assets/crew/image-douglas-hurley.png" alt="Commander-Douglas-image" />
+  </main>
 </body>
 </html>

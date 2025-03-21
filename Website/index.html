@@ -14,8 +14,12 @@
   <!-- Our custom CSS -->
   <link rel="stylesheet" href="index.css">
   <title>Frontend Mentor | Space tourism website</title>
+
+  <!-- "defer" attribute let the js load after has been loaded but it can be place on top of the file  -->
+  <script src="index.js" defer></script>
 </head>
 <body class="home">
+  <a href="#main" class="skip-to-content">Skip to content</a>
   <header class="primary-header flex">
     <div>
       <img src="assets/shared/logo.svg" alt="Space travel tourism logo" class="logo">
@@ -26,16 +30,18 @@
       </span>
     </button>
     <nav>
-      <ul id="primary-navigation" class="flex primary-navigation underline-indicators">
-        <li><a class="uppercase text-white letter-spacing-2" href="#"><span>00</span>Home</a></li>
-        <li><a class="uppercase text-white letter-spacing-2" href="#"><span>01</span>Destination</a></li>
-        <li><a class="uppercase text-white letter-spacing-2" href="#"><span>02</span>Crew</a></li>
-        <li><a class="uppercase text-white letter-spacing-2" href="#"><span>03</span>Technology</a></li>
+      <!-- "aria-hidden" to don't let accessability to read the numbers in the nav -->
+      <!-- hiddeing it for screen readers, because is a decorative touch  -->
+      <ul id="primary-navigation" data-visible="false" class="flex primary-navigation underline-indicators">
+        <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="#"><span aria-hidden="true">00</span>Home</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="#"><span aria-hidden="true">01</span>Destination</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="#"><span aria-hidden="true">02</span>Crew</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="#"><span aria-hidden="true">03</span>Technology</a></li>
     </ul>
     </nav>
   </header>
 
-  <div class="grid-container grid-container--home">
+  <main id="main" class="grid-container grid-container--home">
     <div>
       <h1 class="uppercase letter-spacing-1 ff-sans-cond text-accent fs-500">So, you want to travel to
         <span class="d-block fs-900 ff-serif text-white">Space</span>
@@ -47,8 +53,8 @@
       </p>
     </div>
     <div style="display: flex; justify-content: flex-end; align-items: flex-start;">
-      <a href="#" class="large-button uppercase ff-serif text-dark bg-accent">Explore</a>
+      <a href="#" class="large-button uppercase ff-serif text-dark bg-white">Explore</a>
     </div>
-  </div>
+  </main>
 </body>
 </html>
